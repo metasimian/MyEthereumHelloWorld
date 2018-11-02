@@ -1,0 +1,68 @@
+{
+  "name": "@windingtree/wupi-contracts",
+  "version": "0.2.4",
+  "description": "The WUPI Version of contracts on the Winding Tree platform",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "scripts/test.sh",
+    "lint": "eslint test",
+    "testrpc": "./node_modules/.bin/ganache-cli",
+    "coverage": "SOLIDITY_COVERAGE=true npm run test",
+    "soldoc": "scripts/soldoc.sh",
+    "flattener": "scripts/flattener.sh",
+    "clean": "rimraf build",
+    "buildfornpm": "npm run clean && truffle compile",
+    "deploy-mainnet": "./node_modules/.bin/truffle migrate --network mainnet --reset",
+    "deploy-ropsten": "./node_modules/.bin/truffle migrate --network ropsten --reset"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swainp/wt-contracts"
+  },
+  "keywords": [
+    "winding-tree",
+    "security",
+    "encryption",
+    "smart-contracts"
+  ],
+  "main": "index.js",
+  "author": "The WUPI Team @ Winding Tree Developers <dev@windingtree.com>",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "abi-decoder": "^1.1.0",
+    "babel-polyfill": "^6.23.0",
+    "chai": "^4.1.2",
+    "ethereumjs-abi": "^0.6.5",
+    "ethereumjs-util": "^5.1.5",
+    "moment": "^2.21.0",
+    "openzeppelin-solidity": "^1.11.0",
+    "truffle-hdwallet-provider": "0.0.5",
+    "web3": "^1.0.0-beta.33"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^5.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "ganache-cli": "^6.1.6",
+    "lodash": "^4.17.5",
+    "rimraf": "^2.6.2",
+    "solidity-coverage": "^0.5.5",
+    "solmd": "^0.3.0",
+    "truffle": "^4.1.13",
+    "truffle-contract": "^3.0.6",
+    "truffle-flattener": "^1.2.5",
+    "web3-eth-abi": "^1.0.0-beta.34"
+  },
+  "engines": {
+    "node": ">=10.3.0"
+  }
+}
